@@ -1,0 +1,50 @@
+FROM php:7.2-fpm
+
+RUN apt-get update
+
+RUN apt-get install -y \
+    vim \
+    git \
+    zip \
+    nano \
+    curl \
+    wget \
+    tree \
+    tmux \
+    screen \
+    sudo \
+    unzip \
+    libicu-dev \
+    libbz2-dev \
+    libpng-dev \
+    libjpeg-dev \
+    libmcrypt-dev \
+    libreadline-dev \
+    libfreetype6-dev \
+    libcurl4-openssl-dev \
+    pkg-config \
+    libssl-dev \
+    g++
+
+RUN docker-php-ext-install \
+    gd \
+    bz2 \
+    intl \
+    json \
+    exif \
+    phar \
+    iconv \
+    ctype \
+    bcmath \
+    mysqli \
+    sockets \
+    opcache \
+    calendar \
+    mbstring \
+    pdo_mysql \
+    tokenizer \
+    zip
+
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
+WORKDIR /srv/www
