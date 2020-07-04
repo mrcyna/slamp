@@ -14,7 +14,7 @@ If you need help just call me on [cyna.ir](https://cyna.ir)
 - [Installation](#installation): How to create and start
 
 ### Services
-- HTTP Apache
+- NGINX
 - PHP 7.2
 - MySQL 5.7
 
