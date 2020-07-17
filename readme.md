@@ -12,11 +12,12 @@ If you need help just call me on [cyna.ir](https://cyna.ir)
 - [Privileges](#privileges): What privileges you have in the containers
 - [Requirements](#requirements): What are the requirements to use this dockerized playground
 - [Installation](#installation): How to create and start
+- [Shell Access](#shell-access): How to access inside containers
 
 ### Services
 - NGINX
 - PHP 7.2
-- MySQL 5.7
+- MySQL 8.0
 
 ### Extra Apps
 - vim
@@ -37,6 +38,7 @@ bcmath, bz2, calendar, Core, ctype, curl, date, dom, exif, fileinfo, filter, ftp
 
 ### Privileges
 - root
+- none-root
 
 ### Requirements
 - Docker
@@ -53,3 +55,14 @@ cp .env.example .env
 docker-compose up --build
 ```
 Now open ```slamp.local``` in browser
+
+### Shell Access
+To access the php container as a root user:
+```
+docker-compose exec php bash
+```
+
+To access the php container as a normal user:
+```
+docker-compose exec php bash -c "sudo -u slamp /bin/bash"
+```

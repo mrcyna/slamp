@@ -1,2 +1,4 @@
-volumes/
+docker/volumes/
+.idea/
+.vscode/
 .env

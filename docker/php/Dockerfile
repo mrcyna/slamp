@@ -48,3 +48,8 @@ RUN docker-php-ext-install \
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 WORKDIR /srv/www
+
+ARG uid
+RUN useradd -G www-data,root -u $uid -d /home/slamp slamp
+RUN mkdir -p /home/slamp/.composer && \
+    chown -R slamp:slamp /home/slamp
