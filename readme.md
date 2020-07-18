@@ -33,7 +33,7 @@ If you need help just call me on [cyna.ir](https://cyna.ir)
 - gulp
 
 ### PHP Modules
-bcmath, bz2, calendar, Core, ctype, curl, date, dom, exif, fileinfo, filter, ftp, gd, hash, iconv, intl, json, libxml, mbstring, mysqli, mysqlnd, openssl, pcre, PDO, pdo_mysql, pdo_sqlite, Phar, posix, readline, Reflection, session, SimpleXML, sockets, sodium, SPL, sqlite3, standard, tokenizer, xml, xmlreader, xmlwriter, Zend OPcache, zip, zlib, Zend OPcache
+bcmath, bz2, calendar, Core, ctype, curl, date, dom, exif, fileinfo, filter, ftp, gd, hash, iconv, intl, json, libxml, mbstring, mysqli, mysqlnd, openssl, pcre, PDO, pdo_mysql, pdo_sqlite, Phar, posix, readline, Reflection, session, SimpleXML, soap, sockets, sodium, SPL, sqlite3, standard, tokenizer, xml, xmlreader, xmlwriter, Zend OPcache, zip, zlib, Zend OPcache
 
 
 ### Privileges
@@ -59,10 +59,10 @@ Now open ```slamp.local``` in browser
 ### Shell Access
 To access the php container as a root user:
 ```
-docker-compose exec php bash
+make shell
 ```
 
 To access the php container as a normal user:
 ```
-docker-compose exec php bash -c "sudo -u slamp /bin/bash"
+make root
 ```

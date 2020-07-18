@@ -15,6 +15,7 @@ RUN apt-get install -y \
     sudo \
     unzip \
     libicu-dev \
+    libxml2-dev \
     libbz2-dev \
     libpng-dev \
     libjpeg-dev \
@@ -33,6 +34,7 @@ RUN docker-php-ext-install \
     json \
     exif \
     phar \
+    soap \
     iconv \
     ctype \
     bcmath \
