@@ -1,12 +1,12 @@
 help:
-	@echo "/--- sLAMP ----------------------------------------/";
+	@echo "/--- sLAMP -------------------------------------------------------/";
 	@echo "up		Create and start containers"
 	@echo "destroy		Stop and remove containers"
 	@echo "status 		Shows the status of the containers"
 	@echo "shell		Starting a shell in php container"
-	@echo "root		Starting a shell in php container"
+	@echo "root		Starting a shell in php container (sudo privileges)"
 	@echo "mysql		Starting a shell in mysql container"
-	@echo "/--------------------------------------------------/";
+	@echo "/-----------------------------------------------------------------/";
 
 up:
 	docker-compose up -d

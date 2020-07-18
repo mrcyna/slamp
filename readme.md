@@ -59,10 +59,10 @@ Now open ```slamp.local``` in browser
 ### Shell Access
 To access the php container as a root user:
 ```
-make shell
+make root
 ```
 
 To access the php container as a normal user:
 ```
-make root
+make shell
 ```
