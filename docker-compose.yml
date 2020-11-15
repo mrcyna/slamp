@@ -2,7 +2,7 @@ version: '3'
 
 services:
   php:
-    container_name: ${NAMESPACE:-slamp}-php
+    container_name: ${NAMESPACE:-arvancloud}-php
     build:
       context: ./docker/php
       args:
@@ -14,7 +14,7 @@ services:
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
   nginx:
-    container_name: ${NAMESPACE:-slamp}-nginx
+    container_name: ${NAMESPACE:-arvancloud}-nginx
     image: nginx:latest
     ports:
       - ${HTTP_PORT:-0}:80
@@ -24,7 +24,7 @@ services:
     depends_on:
       - php
   mysql:
-    container_name: ${NAMESPACE:-slamp}-mysql
+    container_name: ${NAMESPACE:-arvancloud}-mysql
     image: mysql:8.0
     command: ['--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci','--default-authentication-plugin=mysql_native_password']
     ports:

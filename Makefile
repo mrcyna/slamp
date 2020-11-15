@@ -1,5 +1,5 @@
 help:
-	@echo "/--- sLAMP -------------------------------------------------------/";
+	@echo "/--- ArvanCloud --------------------------------------------------/";
 	@echo "up		Create and start containers"
 	@echo "destroy		Stop and remove containers"
 	@echo "status 		Shows the status of the containers"
@@ -18,7 +18,7 @@ status:
 	docker-compose ps
 
 shell:
-	docker-compose exec php bash -c "sudo -u slamp /bin/bash"
+	docker-compose exec php bash -c "sudo -u arvancloud /bin/bash"
 
 root:
 	docker-compose exec php bash
