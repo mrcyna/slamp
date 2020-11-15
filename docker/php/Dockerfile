@@ -52,6 +52,6 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 WORKDIR /srv/www
 
 ARG uid
-RUN useradd -G www-data,root -u $uid -d /home/arvancloud arvancloud
-RUN mkdir -p /home/arvancloud/.composer && \
-    chown -R arvancloud:arvancloud /home/arvancloud
+RUN useradd -G www-data,root -u $uid -d /home/slamp slamp
+RUN mkdir -p /home/slamp/.composer && \
+    chown -R slamp:slamp /home/slamp
