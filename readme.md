@@ -4,7 +4,7 @@ For those who wants to enjoy the ease of slim and minimal PHP development!
 ### Introduction
 Long story short... I was frustrated to install all of those little piece of LAMP stack (Linux, Apache, MySQL, PHP) everytime to do the development for my personal projects so I create [WebDev](https://gitlab.com/mrcyna/webdev) but after a while I found out that **WebDev** was too big for barebone projects so I create this ;)
 
-If you need help just call me on [cyna.ir](https://cyna.ir)
+If you need help just call me on [mrcyna.dev](https://mrcyna.dev)
 
 - [Services](#services): What WebDev offers
 - [Extra Apps](#extra-apps): What will be shipped with this image
