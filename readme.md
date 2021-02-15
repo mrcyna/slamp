@@ -18,6 +18,7 @@ If you need help just reach me on [mrcyna.dev](https://mrcyna.dev)
 - NGINX (Latest)
 - PHP 7.2
 - MySQL 8.0
+- phpMyAdmin (Latest)
 
 ### Extra Apps
 - vim

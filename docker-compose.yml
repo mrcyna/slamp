@@ -13,6 +13,8 @@ services:
       - ./docker/php/php.ini:/usr/local/etc/php/conf.d/php.ini
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
+    depends_on:
+      - mysql
   nginx:
     container_name: ${NAMESPACE:-slamp}-nginx
     image: nginx:latest
@@ -22,7 +24,7 @@ services:
       - ./:/srv/www
       - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
-      - php
+      - mysql
   mysql:
     container_name: ${NAMESPACE:-slamp}-mysql
     image: mysql:8.0
@@ -31,9 +33,15 @@ services:
       - ${MYSQL_PORT:-0}:3306
     volumes:
       - ./docker/volumes/mysql:/var/lib/mysql
-    depends_on:
-      - php
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - ${PMA_PORT:-0}:80
+    environment:
+      PMA_HOST: mysql
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    depends_on:
+      - mysql
