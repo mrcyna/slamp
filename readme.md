@@ -49,7 +49,7 @@ bcmath, bz2, calendar, Core, ctype, curl, date, dom, exif, fileinfo, filter, ftp
 ### Installation
 Add ```127.0.0.1 slamp.local``` to ```/etc/hosts``` file and then run the below commands
 ```
-git clone git@gitlab.com:mrcyna/slamp.git slamp
+git clone git@github.com:mrcyna/slamp.git slamp
 cd slamp
 cp .env.example .env
 docker-compose up --build
