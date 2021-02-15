@@ -2,20 +2,20 @@
 For those who wants to enjoy the ease of slim and minimal PHP development!
 
 ### Introduction
-Long story short... I was frustrated to install all of those little piece of LAMP stack (Linux, Apache, MySQL, PHP) everytime to do the development for my personal projects so I create [WebDev](https://github.com/mrcyna/webdev) but after a while I found out that **WebDev** was too big for barebone projects so I create this ;)
+Long story short... I was frustrated to install all of those little piece of LAMP stack (Linux, Apache, MySQL, PHP) everytime to do the development for my personal projects, so I create this.
 
-If you need help just call me on [mrcyna.dev](https://mrcyna.dev)
+If you need help just reach me on [mrcyna.dev](https://mrcyna.dev)
 
-- [Services](#services): What WebDev offers
-- [Extra Apps](#extra-apps): What will be shipped with this image
-- [PHP Modules](#php-modules): What PHP modules get installed 
-- [Privileges](#privileges): What privileges you have in the containers
-- [Requirements](#requirements): What are the requirements to use this dockerized playground
-- [Installation](#installation): How to create and start
-- [Shell Access](#shell-access): How to access inside containers
+- [Services](#services) What WebDev offers
+- [Extra Apps](#extra-apps) What will be shipped with this image
+- [PHP Modules](#php-modules) What PHP modules get installed 
+- [Privileges](#privileges) What privileges you have in the containers
+- [Requirements](#requirements) What are the requirements to use this dockerized playground
+- [Installation](#installation) How to create and start
+- [Shell Access](#shell-access) How to access inside containers
 
 ### Services
-- NGINX
+- NGINX (Latest)
 - PHP 7.2
 - MySQL 8.0
 
@@ -53,6 +53,7 @@ git clone git@github.com:mrcyna/slamp.git slamp
 cd slamp
 cp .env.example .env
 docker-compose up --build
+rm -rf .git
 ```
 Now open ```slamp.local``` in browser
 
