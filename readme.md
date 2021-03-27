@@ -46,6 +46,7 @@ bcmath, bz2, calendar, Core, ctype, curl, date, dom, exif, fileinfo, filter, ftp
 - Docker Compose
 - Git
 - Bash
+- Make
 
 ### Installation
 Add ```127.0.0.1 slamp.local``` to ```/etc/hosts``` file and then run the below commands
@@ -53,6 +54,7 @@ Add ```127.0.0.1 slamp.local``` to ```/etc/hosts``` file and then run the below 
 git clone git@github.com:mrcyna/slamp.git slamp && cd slamp
 mv .env.example .env
 rm -rf .git
+make up
 ```
 Now open ```slamp.local``` in browser
 
